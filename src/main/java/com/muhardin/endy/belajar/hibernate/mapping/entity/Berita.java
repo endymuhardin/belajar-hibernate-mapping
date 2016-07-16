@@ -33,7 +33,8 @@ public class Berita {
     @Column(nullable = false)
     private String isi;
 
-    @OneToMany(mappedBy = "berita", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "id_berita")
     private List<Komentar> daftarKomentar
             = new ArrayList<>();
 
