@@ -34,11 +34,7 @@ public class Komentar {
     private String isi;
 
     @ManyToOne
-    @JoinTable(
-            name = "komentar_berita",
-            joinColumns = @JoinColumn(name = "id_komentar", insertable = false, updatable = false),
-            inverseJoinColumns = @JoinColumn(name = "id_berita", insertable = false, updatable = false)
-    )
+    @JoinColumn(name = "id_berita", nullable = false)
     private Berita berita;
 
     public Integer getId() {

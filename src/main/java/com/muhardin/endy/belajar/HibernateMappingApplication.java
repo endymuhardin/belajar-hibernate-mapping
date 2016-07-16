@@ -24,6 +24,7 @@ public class HibernateMappingApplication {
         k.setNama("Endy Muhardin");
         k.setIsi("Wih, ngeri gan");
         k.setWaktuPublikasi(new Date());
+        k.setBerita(b);
         
         b.getDaftarKomentar().add(k);
         
